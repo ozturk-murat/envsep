@@ -85,10 +85,9 @@ export default function Home() {
           </p>
           <div className="grid gap-y-4 rounded-lg">
             {items.map((item, index) => (
-              <div className="flex gap-x-4">
+              <div className="flex gap-x-4" key={item.key}>
                 <input
                   onPaste={(e) => pasteHandle(e, index)}
-                  key={index}
                   onChange={(e) => {
                     setItems((items) =>
                       items.map((item, i) => {
