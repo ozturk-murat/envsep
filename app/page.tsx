@@ -34,6 +34,9 @@ export default function Home() {
             let find = items.find((i) => i.key === key);
             if (!find || find?.key === items[index].key) {
               return { key, value: value.join("=") };
+            }else{
+              alert("Same keys & values detected. Plase paste different key&value on the form.")
+              setItems((items) => items.filter((_, key) => key !== index))
             }
           }
         })
